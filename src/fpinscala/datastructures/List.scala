@@ -154,6 +154,6 @@ object List { // `List` companion object
   def zipWith[A, B, C](a: List[A], b: List[B])(f: (A, B) => C): List[C] = (a, b) match {
     case (_, Nil) => Nil
     case (Nil, _) => Nil
-    case (Cons(a, as), Cons(b, bs)) => Cons(f(a, b), zipWith(as, bs))
+    case (Cons(a, as), Cons(b, bs)) => Cons(f(a, b), zipWith(as, bs)(f))
   }
 }
