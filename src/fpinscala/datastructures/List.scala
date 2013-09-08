@@ -122,7 +122,7 @@ object List { // `List` companion object
   }
 
   def map[A,B](l: List[A])(f: A => B): List[B] = {
-    foldRight(l, Nil:List[A])((x, acc) => Cons(f(x), acc))
+    foldRight(l, Nil:List[B])((x, acc) => Cons(f(x), acc))
   }
 
   def filter[A](l: List[A])(f: A => Boolean): List[A] = l match {
