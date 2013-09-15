@@ -29,6 +29,7 @@ sealed trait Either[+E,+A] {
     } yield(f(x, y))
   }
 }
+
 case class Left[+E](get: E) extends Either[E,Nothing]
 case class Right[+A](get: A) extends Either[Nothing,A]
 
