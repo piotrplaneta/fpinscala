@@ -1,7 +1,5 @@
 package fpinscala.datastructures
 
-import runtime.IntRef
-
 /**
  * Created with IntelliJ IDEA.
  * User: piotrplaneta
