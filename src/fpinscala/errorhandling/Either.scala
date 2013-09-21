@@ -1,11 +1,5 @@
 package fpinscala.errorhandling
 
-/**
- * Created with IntelliJ IDEA.
- * User: piotrplaneta
- * Date: 9/14/13
- * Time: 7:57 PM
- */
 sealed trait Either[+E,+A] {
   def map[B](f: A => B): Either[E, B] = this match {
     case Left(e) => Left(e)

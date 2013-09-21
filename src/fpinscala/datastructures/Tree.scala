@@ -1,11 +1,5 @@
 package fpinscala.datastructures
 
-/**
- * Created with IntelliJ IDEA.
- * User: piotrplaneta
- * Date: 9/8/13
- * Time: 6:08 PM
- */
 sealed trait Tree[+A]
 case class Leaf[A](value: A) extends Tree[A]
 case class Branch[A](left: Tree[A], right: Tree[A]) extends Tree[A]

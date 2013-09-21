@@ -1,11 +1,5 @@
 package fpinscala.errorhandling
 
-/**
- * Created with IntelliJ IDEA.
- * User: piotrplaneta
- * Date: 9/9/13
- * Time: 10:34 PM
- */
 sealed trait Option[+A] {
   def map[B](f: A => B): Option[B] = this match {
     case Some(x) => Some(f(x))
